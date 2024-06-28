@@ -1,0 +1,42 @@
+<section id="contact" class="contact" >
+    <div class="container aos-init" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>PRODUCTS</h2>
+    
+      
+      </div>
+      <div class="container aos-init" data-aos="zoom-in">
+        <div class="row">
+      
+  
+          <div class="disc">
+            <swiper-container
+              dir="auto"
+              space-between="7"
+              navigation="true"
+              slides-per-view="3"
+              class="mySwiper2"
+              watch-slides-progress="true"
+              style="
+                --swiper-navigation-color: #fff;
+                --swiper-pagination-color: #fff;
+                width: 100%;
+                height: 95%;
+              "
+            >
+              <swiper-slide *ngFor="let image of filteredImages">
+                <div>
+                  <img [src]="image.src" class="img-fluid" alt="Image" />
+                </div>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+        </div>
+      </div>
+    
+
+ 
+
+    </div>
+</section>

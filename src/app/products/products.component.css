@@ -1,0 +1,41 @@
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+    padding: 60px 0;
+}
+  .section-title h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0;
+    background: #f7f8fa;
+    color: #128ea6;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;}
+
+    .section-title h3 {
+      margin: 15px 0 0 0;
+      font-size: 32px;
+      font-weight: 700;
+      color: #0b0b0b;}
+
+      .section-title p {
+        margin: 15px auto 0 auto;
+        font-weight: 60;
+    }
+    .slick-slider.brandslider {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .swiper-slide img {
+      width: 100%;
+      display: block;
+    }
+    .contact img:hover {
+      transform: scale(1.10);
+    }
+    

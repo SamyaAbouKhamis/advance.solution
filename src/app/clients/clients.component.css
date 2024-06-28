@@ -1,0 +1,28 @@
+.slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Adjust this based on your needs */
+  }
+  
+  .client-image {
+    width: 90px; /* Adjust based on your needs */
+    height: 90px; /* Adjust based on your needs */
+    object-fit: contain; /* Ensures the image scales without distortion */
+    border-radius: 200px;
+  }
+  .clients img:hover {
+    transform: scale(1.15);
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .slide-content {
+      height: 100px; /* Adjust based on your needs for mobile */
+    }
+  
+    .client-image {
+      width: 50px; /* Adjust based on your needs for mobile */
+      height: 50px; /* Adjust based on your needs for mobile */
+    }
+  }
