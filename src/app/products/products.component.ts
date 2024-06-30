@@ -20,6 +20,8 @@ interface Image {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ProductsComponent implements OnInit {
+
+  
   swiperConfig: any;
 
   // images: string[] = [

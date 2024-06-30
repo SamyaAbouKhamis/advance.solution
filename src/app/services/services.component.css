@@ -7,7 +7,7 @@
 }
 
 .section-title h2 {
-  font-size: 13px;
+  font-size: revert;
   letter-spacing: 1px;
   font-weight: 700;
   padding: 8px 20px;
@@ -53,18 +53,20 @@
   justify-content: center;
   margin-bottom: 15px;
   transition: ease-in-out 0.3s;
+ 
+
 }
 
 .services .icon .icon i span {
-  color: #128ea6;
+  color: #a69012;
   font-size: 28px;
   transition: ease-in-out 0.3s;
   width: 200px;
 }
 
-.services .icon:hover .icon i {
-  color: #128ea6;
-}
+/* .services .icon:hover .icon i {
+  color: #a68312;
+} */
 
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";
@@ -78,7 +80,7 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  color: #128ea6;
+  color:#128ea6;
 }
 
 .material-symbols-outlined:hover {
@@ -94,8 +96,8 @@
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
-  color: #6e6b6b;
+.services .text h4 a {
+  color: #666363;
   transition: ease-in-out 0.3s;
 }
 

@@ -37,7 +37,7 @@ export class PortfolioComponent implements OnInit {
   // ];
   images: Image[] = [
     
-    { src: 'assets/camera/1.png', category: 'Cameras' },
+    { src: 'assets/camera/00.png', category: 'Cameras' },
     { src: 'assets/camera/3.png', category: 'Cameras' },
     { src: 'assets/camera/4.png', category: 'Cameras' },
     { src: 'assets/camera/5.png', category: 'Cameras' },
