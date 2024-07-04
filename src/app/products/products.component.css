@@ -34,8 +34,14 @@
     .swiper-slide img {
       width: 100%;
       display: block;
+
     }
     .contact img:hover {
       transform: scale(1.10);
     }
-    
+      .section-disc {
+    animation: scroll 25s linear infinite;
+    animation-delay: calc(25s / -2);
+    }
+
+

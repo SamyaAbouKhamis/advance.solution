@@ -13,9 +13,10 @@ import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 
+
 export const routes: Routes = [
     { path: '', component: HeaderComponent },
-    { path: 'hero', component: HeroComponent },
+    { path: 'hero', component: HeroComponent},
     { path: 'featured', component: FeaturedComponent },
     { path: 'about', component: AboutComponent },
     { path: 'counts', component: CountsComponent },
@@ -26,4 +27,5 @@ export const routes: Routes = [
     { path: 'back-to-top', component: BackToTopComponent },
     { path: 'products', component: ProductsComponent },
     { path: 'contact', component: ContactComponent },
+
 ];
