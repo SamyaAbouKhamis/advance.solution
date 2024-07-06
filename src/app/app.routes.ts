@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import path from 'path';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 
 
 export const routes: Routes = [
@@ -28,4 +30,13 @@ export const routes: Routes = [
     { path: 'products', component: ProductsComponent },
     { path: 'contact', component: ContactComponent },
 
+  { path: '', redirectTo: 'en-US', pathMatch: 'full' }, // Default redirection
+  { path: ':lang', component: AppComponent }, // Handle language segments
+  { path: '**', redirectTo: 'en-US' }, // Catch-all to redirect to default language
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutes {}

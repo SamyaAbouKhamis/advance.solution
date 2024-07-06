@@ -1,0 +1,13 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "2821179408673282599": "Home",
+    "1726363342938046830": "About",
+    "7143579180750436311": "Services",
+    "9201103587777813545": "Portfolio",
+    "6707361102856436710": "Products",
+    "7922989125096435449": "Contact",
+    "3665434330360960554": " Welcome to {$START_TAG_SPAN}advance solution {$CLOSE_TAG_SPAN}",
+    "5485072068199666072": "Hello "
+  }
+}

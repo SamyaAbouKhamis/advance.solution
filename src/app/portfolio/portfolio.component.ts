@@ -36,19 +36,17 @@ export class PortfolioComponent implements OnInit {
 
   // ];
   images: Image[] = [
-    
     { src: 'assets/camera/00.png', category: 'Cameras' },
+    { src: 'assets/camera/5.png', category: 'Cameras' },
     { src: 'assets/camera/3.png', category: 'Cameras' },
     { src: 'assets/camera/4.png', category: 'Cameras' },
-    { src: 'assets/camera/5.png', category: 'Cameras' },
-    { src: 'assets/camera/6.png', category: 'Cameras' },
-    { src: 'assets/camera/7.png', category: 'Cameras' },
-    { src: 'assets/camera/8.png', category: 'Cameras' },
-    { src: 'assets/camera/9.png', category: 'Cameras' },
-    { src: '../../assets/camera/portfolio-2.jpg', category: 'Servers' },
-    { src: '../../assets/about.jpg', category: 'Servers' },
-    { src: '../../assets/camera/portfolio-3.jpg', category: 'Networks' },
-    { src: '../../assets/camera/portfolio-1.jpg', category: 'Networks' },
+    {
+      src: './assets/camera/Image_N464E124C_WebsiteThumbnail.png',
+      category: 'Servers',
+    },
+    { src: './assets/camera/2.png', category: 'Servers' },
+    { src: './assets/camera/router.png', category: 'Networks' },
+    { src: './assets/camera/resever.png', category: 'Networks' },
   ];
   filteredImages: Image[] = [...this.images];
   selectedCategory: string = 'All';
