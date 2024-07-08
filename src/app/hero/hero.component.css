@@ -7,7 +7,7 @@
 background-position: 50%;
   box-shadow: inset 20vh 30vh 50vh rgb(0,0 ,0 ,.16);
 margin-bottom: 15vh;
-/* clip-path: circle(184vh at 75vh -95vh); */
+clip-path: circle(184vh at 80vh -85vh);
 }
 
   #hero:before {

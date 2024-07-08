@@ -31,30 +31,42 @@ import { AboutComponent } from './about/about.component';
 
   // animations: [
   //   trigger('fadeInOut', [
-  //     transition(':enter', [
-  //       style({ opacity: 0 }),
-  //       animate('2000ms ease-in', style({ opacity: 1 })),
-  //     ]),
-  //     transition(':leave', [animate('300ms ease-out', style({ opacity: 0 }))]),
-  //   ]),
-  //   trigger('Wobble', [
-  //     state('in', style({ transform: 'translateX(0)' })),
-  //     transition(':enter', [
-  //       style({ transform: 'translateX(-100%)' }),
-  //       animate('1000ms ease-in', style({ transform: 'translateX(0)' })),
-  //     ]),
-  //     transition(':leave', [
-  //       animate('1000ms ease-out', style({ transform: 'translateX(-100%)' })),
-  //     ]),
+  //     state(
+  //       'in',
+  //       style({
+  //         opacity: 1,
+  //       })
+  //     ),
+  //     state(
+  //       'out',
+  //       style({
+  //         opacity: 0,
+  //       })
+  //     ),
+  //     transition('in <=> out', [animate(1000)]),
   //   ]),
   // ],
-  imports: [RouterOutlet,HeaderComponent,HeroComponent,FeaturedComponent,
-  AboutComponent,CountsComponent,ClientsComponent,ServicesComponent,PortfolioComponent,ContactComponent,
-FooterComponent,BackToTopComponent,ProductsComponent,NgOptimizedImage,RouterLink ],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    HeroComponent,
+    FeaturedComponent,
+    AboutComponent,
+    CountsComponent,
+    ClientsComponent,
+    ServicesComponent,
+    PortfolioComponent,
+    ContactComponent,
+    FooterComponent,
+    BackToTopComponent,
+    ProductsComponent,
+    NgOptimizedImage,
+    RouterLink,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'advance';
-
+ 
 }

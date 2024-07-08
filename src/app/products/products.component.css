@@ -39,9 +39,12 @@
     .contact img:hover {
       transform: scale(1.10);
     }
-      .section-disc {
-    animation: scroll 25s linear infinite;
-    animation-delay: calc(25s / -2);
-    }
 
 
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}

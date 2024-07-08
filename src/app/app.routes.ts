@@ -17,18 +17,23 @@ import { AppComponent } from './app.component';
 
 
 export const routes: Routes = [
-    { path: '', component: HeaderComponent },
-    { path: 'hero', component: HeroComponent},
-    { path: 'featured', component: FeaturedComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'counts', component: CountsComponent },
-    { path: 'clients', component: ClientsComponent },
-    { path: 'services', component: ServicesComponent },
-    { path: 'portfolio', component: PortfolioComponent },
-    { path: 'footer', component: FooterComponent },
-    { path: 'back-to-top', component: BackToTopComponent },
-    { path: 'products', component: ProductsComponent },
-    { path: 'contact', component: ContactComponent },
+  { path: '', component: HeaderComponent },
+  { path: 'hero', component: HeroComponent },
+  { path: 'featured', component: FeaturedComponent },
+
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./about/about.component').then((m) => m.AboutComponent),
+  },
+  { path: 'counts', component: CountsComponent },
+  { path: 'clients', component: ClientsComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'back-to-top', component: BackToTopComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'contact', component: ContactComponent },
 
   { path: '', redirectTo: 'en-US', pathMatch: 'full' }, // Default redirection
   { path: ':lang', component: AppComponent }, // Handle language segments

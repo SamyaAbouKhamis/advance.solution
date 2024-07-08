@@ -19,11 +19,7 @@ interface Image {
   styleUrl: './products.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ProductsComponent implements OnInit {
-
-  
-  swiperConfig: any;
-
+export class ProductsComponent {
   // images: string[] = [
   //   'assets/camera1.jpg',
   //   'assets/camea2.jpg',
@@ -33,42 +29,16 @@ export class ProductsComponent implements OnInit {
   //   '../../assets/portfolio-3.jpg',
 
   // ];
-  images: Image[] = [
-    { src: 'assets/dahua.png', category: 'Cameras' },
-    { src: 'assets/zk.png', category: 'Cameras' },
-    { src: 'assets/MMC.png', category: 'Cameras' },
-    { src: 'assets/qnap.png', category: 'Cameras' },
-    { src: 'assets/Mikrotik.png', category: 'Cameras' },
-    { src: 'assets/Logo-Ubiq.png', category: 'Cameras' },
-    { src: 'assets/qnap.png', category: 'Cameras' },
-    { src: 'assets/Seagate.png', category: 'Cameras' },
-    { src: 'assets/qnap.png', category: 'Cameras' },
- 
+
+  filteredImages: { src: string }[] = [
+    { src: 'assets/dahua.png' },
+    { src: 'assets/zk.png' },
+    { src: 'assets/MMC.png' },
+    { src: 'assets/qnap.png' },
+    { src: 'assets/Mikrotik.png' },
+    { src: 'assets/Logo-Ubiq.png' },
+    { src: 'assets/qnap.png' },
+    { src: 'assets/Seagate.png' },
+    { src: 'assets/qnap.png' },
   ];
-  filteredImages: Image[] = [...this.images];
-  selectedCategory: string = 'All';
-
-  filterImages(category: string) {
-    this.selectedCategory = category;
-    if (category === 'All') {
-      this.filteredImages = [...this.images];
-    } else {
-      this.filteredImages = this.images.filter(
-        (image) => image.category === category
-      );
-    }
-  }
-
-  constructor() {}
-
-  ngOnInit(): void {
-    this.swiperConfig = {
-      slidesPerView: 3,
-      spaceBetween: 7,
-      navigation: true,
-    };
-  }
-
-  
 }
-

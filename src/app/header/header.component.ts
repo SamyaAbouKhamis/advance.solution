@@ -1,21 +1,83 @@
 import { Component, ElementRef, Inject, Input, LOCALE_ID, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink } from '@angular/router';
-import { DOCUMENT, NgOptimizedImage } from '@angular/common'
+import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common'
+import { animate, AnimationBuilder, group, state, style, transition, trigger } from '@angular/animations';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, NgOptimizedImage],
+  imports: [RouterLink, NgOptimizedImage,CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
+  animations: [
+    trigger('linkAnimation', [
+      state(
+        'inactive',
+        style({
+          transform: 'scale(1)',
+          opacity: 1,
+          color: 'black',
+        })
+      ),
+      state(
+        'active',
+        style({
+          transform: 'scale(1.1)',
+          opacity: 0.5,
+          color: '#128ea6',
+        })
+      ),
+      transition('inactive => active', [
+        group([
+          animate('100ms', style({ opacity: 1 })), // initial delay
+          animate(
+            '300ms 100ms ease-in',
+            style({
+              transform: 'scale(1.1)',
+              opacity: 0.5,
+              color: '#128ea6',
+            })
+          ),
+        ]),
+      ]),
+      transition('active => inactive', [
+        group([
+          animate(
+            '300ms ease-out',
+            style({
+              transform: 'scale(1)',
+              opacity: 0.5, // add intermediate opacity for fade out
+              color: 'black',
+            })
+          ),
+          animate('300ms 100ms ease-out', style({ opacity: 1 })),
+        ]),
+      ]),
+    ]),
+    trigger('pageAnimation', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(100%)' }),
+        animate(
+          '300ms ease-out',
+          style({ opacity: 1, transform: 'translateX(0)' })
+        ),
+      ]),
+      transition(':leave', [
+        animate(
+          '300ms ease-in',
+          style({ opacity: 0, transform: 'translateX(-100%)' })
+        ),
+      ]),
+    ]),
+  ],
 })
 export class HeaderComponent {
   activeLink: string = '';
-
 
   constructor(
     @Inject(LOCALE_ID) public locale: string,
     private router: Router,
     private activatedRoute: ActivatedRoute,
+    private animationBuilder: AnimationBuilder,
     @Inject(DOCUMENT) private document: Document
   ) {}
   ngOnInit() {
@@ -32,12 +94,10 @@ export class HeaderComponent {
           }, 100);
         }
         // Decode the entire URL to handle any double encoding issues
-      const decodedUrl = decodeURIComponent(this.router.url);
-      const urlSegments = decodedUrl.split('/');
-      this.locale = urlSegments[1] || 'en';
-     this.changeCssFile(this.locale);
-         
-      
+        const decodedUrl = decodeURIComponent(this.router.url);
+        const urlSegments = decodedUrl.split('/');
+        this.locale = urlSegments[1] || 'en';
+        this.changeCssFile(this.locale);
       }
     });
   }
@@ -74,14 +134,21 @@ export class HeaderComponent {
     }
   }
   switchLang() {
-    const newLocale = this.locale === 'ar' ? 'en-US' : 'ar';
+    const newLocale = this.locale === 'ar' ? 'en' : 'ar';
     this.locale = newLocale;
     this.router.navigate(['/', this.locale]);
-    
   }
+  private scrollToElement(element: HTMLElement): void {
+    const animation = this.animationBuilder.build([
+      style({ scrollTop: window.pageYOffset }),
+      animate('0.5s ease', style({ scrollTop: element.offsetTop })),
+    ]);
 
-  scrollToElement(element: HTMLElement) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const player = animation.create(document.body);
+    player.onDone(() =>
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    );
+    player.play();
   }
 }
 

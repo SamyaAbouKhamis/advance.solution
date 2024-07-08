@@ -17,13 +17,13 @@ export class AboutComponent implements OnInit {
     // './assets/work/5.jpg',
     // './assets/work/6.jpg',
     './assets/work/7.jpg',
-    './assets/work/8.jpg',
+    // './assets/work/8.jpg',
 
     './assets/work/9.jpg',
     './assets/work/10.jpg',
 
-    './assets/work/11.jpg',
-    './assets/work/12.jpg',
+    // './assets/work/11.jpg',
+    // './assets/work/12.jpg',
 
     './assets/work/13.jpg',
 
@@ -36,7 +36,7 @@ export class AboutComponent implements OnInit {
     './assets/work/20.jpg',
     './assets/work/21.jpg',
     './assets/work/22.jpg',
-    './assets/work/23.jpg',
+    // './assets/work/23.jpg',
     './assets/work/24.jpg',
     './assets/work/25.jpg',
     './assets/work/26.jpg',
@@ -50,12 +50,15 @@ export class AboutComponent implements OnInit {
   currentImage: string = this.images[0];
   private currentIndex: number = 0;
   private intervalId: any;
+
   ngOnInit(): void {
     this.startAutoSlide();
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.intervalId);
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 
   startAutoSlide(): void {
@@ -63,10 +66,12 @@ export class AboutComponent implements OnInit {
       this.nextImage();
     }, 5000); // Change image every 5 seconds
   }
+
   nextImage(): void {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
     this.currentImage = this.images[this.currentIndex];
   }
+
   prevImage(): void {
     this.currentIndex =
       (this.currentIndex - 1 + this.images.length) % this.images.length;

@@ -5,7 +5,7 @@
   "projects": {
     "advance": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "en",
         "locales": {
           "ar": {
             "translation": "src/locale/messages.ar.json",
@@ -106,7 +106,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"],
+            "styles": ["src/styles.css", "node_modules/swiper/swiper-bundle.min.css"],
             "scripts": []
           }
         }

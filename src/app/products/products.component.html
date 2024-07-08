@@ -1,10 +1,10 @@
- <section id="products" class="products" >
+ <section id="products" class="products" style="padding: 100px;">
 
 
     <div class="container aos-init" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>PRODUCTS</h2>
+        <h2 i18n>PRODUCTS</h2>
     
       
       </div>
@@ -15,17 +15,15 @@
           <div class="disc">
             <swiper-container
               dir="auto"
+              autoplay="true"
+              [autoplay]="{
+                delay: 1000,
+                disableOnInteraction: true
+              }"
               space-between="7"
-              navigation="true"
               slides-per-view="3"
               class="mySwiper2"
-              watch-slides-progress="true"
-              style="
-                --swiper-navigation-color: #fff;
-                --swiper-pagination-color: #fff;
-                width: 100%;
-                height: 95%;
-              "
+             
             >
               <swiper-slide *ngFor="let image of filteredImages">
                 <div>

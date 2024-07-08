@@ -5,8 +5,13 @@
       <swiper-container
         dir="rtl"
         space-between="30"
-        slides-per-view="4"
+        slides-per-view="5"
         free-mode="true"
+        autoplay="true"
+              [autoplay]="{
+                delay: 1200,
+                disableOnInteraction: true
+              }"
       >
         <swiper-slide
           role="group"
