@@ -74,6 +74,8 @@ export class ContactComponent {
   }
 
   openSnackBar(message: string) {
-    this._snackBar.open('Done!! has Been sucseefule');
+    this._snackBar.open('Done!!', undefined, {
+      duration: 3000,
+    });
   }
 }
