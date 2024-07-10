@@ -5,7 +5,7 @@ import { animate, AnimationBuilder, group, state, style, transition, trigger } f
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, NgOptimizedImage,CommonModule],
+  imports: [RouterLink, NgOptimizedImage, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   animations: [
@@ -16,6 +16,7 @@ import { animate, AnimationBuilder, group, state, style, transition, trigger } f
           transform: 'scale(1)',
           opacity: 1,
           color: 'black',
+          textDecoration: 'none',
         })
       ),
       state(
@@ -24,6 +25,7 @@ import { animate, AnimationBuilder, group, state, style, transition, trigger } f
           transform: 'scale(1.1)',
           opacity: 0.5,
           color: '#128ea6',
+          textDecoration: 'underline',
         })
       ),
       transition('inactive => active', [
@@ -35,6 +37,7 @@ import { animate, AnimationBuilder, group, state, style, transition, trigger } f
               transform: 'scale(1.1)',
               opacity: 0.5,
               color: '#128ea6',
+              textDecoration: 'underline',
             })
           ),
         ]),
@@ -47,6 +50,7 @@ import { animate, AnimationBuilder, group, state, style, transition, trigger } f
               transform: 'scale(1)',
               opacity: 0.5, // add intermediate opacity for fade out
               color: 'black',
+              textDecoration: 'none',
             })
           ),
           animate('300ms 100ms ease-out', style({ opacity: 1 })),

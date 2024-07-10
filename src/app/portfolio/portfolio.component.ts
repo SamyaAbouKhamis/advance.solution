@@ -44,7 +44,7 @@ export class PortfolioComponent implements OnInit {
       src: './assets/camera/Image_N464E124C_WebsiteThumbnail.png',
       category: 'Servers',
     },
-    { src: './assets/camera/2.png', category: 'Servers' },
+    { src: './assets/camera/11.png', category: 'Servers' },
     { src: './assets/camera/router.png', category: 'Networks' },
     { src: './assets/camera/resever.png', category: 'Networks' },
   ];

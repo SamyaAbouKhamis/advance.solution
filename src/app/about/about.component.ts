@@ -13,20 +13,10 @@ export class AboutComponent implements OnInit {
     './assets/work/2.jpg',
     './assets/work/3.jpg',
     './assets/work/4.jpg',
-
-    // './assets/work/5.jpg',
-    // './assets/work/6.jpg',
     './assets/work/7.jpg',
-    // './assets/work/8.jpg',
-
     './assets/work/9.jpg',
     './assets/work/10.jpg',
-
-    // './assets/work/11.jpg',
-    // './assets/work/12.jpg',
-
     './assets/work/13.jpg',
-
     './assets/work/14.jpg',
     './assets/work/15.jpg',
     './assets/work/16.jpg',
@@ -36,7 +26,6 @@ export class AboutComponent implements OnInit {
     './assets/work/20.jpg',
     './assets/work/21.jpg',
     './assets/work/22.jpg',
-    // './assets/work/23.jpg',
     './assets/work/24.jpg',
     './assets/work/25.jpg',
     './assets/work/26.jpg',
@@ -45,6 +34,21 @@ export class AboutComponent implements OnInit {
     './assets/work/29.jpg',
     './assets/work/30.jpg',
     './assets/work/31.jpg',
+    './assets/work/32.jpg',
+    './assets/work/33.jpg',
+    './assets/work/34.jpg',
+    './assets/work/35.jpg',
+    './assets/work/36.jpg',
+    './assets/work/37.jpg',
+    './assets/work/38.jpg',
+    './assets/work/39.jpg',
+    './assets/work/40.jpg',
+    './assets/work/41.jpg',
+    './assets/work/42.jpg',
+    './assets/work/43.jpg',
+    './assets/work/44.jpg',
+    './assets/work/46.jpg',
+   
     // Add more image paths here
   ];
   currentImage: string = this.images[0];
