@@ -21,11 +21,7 @@ export const routes: Routes = [
   { path: 'hero', component: HeroComponent },
   { path: 'featured', component: FeaturedComponent },
 
-  {
-    path: 'about',
-    loadChildren: () =>
-      import('./about/about.component').then((m) => m.AboutComponent),
-  },
+  { path: 'about', component: AboutComponent },
   { path: 'counts', component: CountsComponent },
   { path: 'clients', component: ClientsComponent },
   { path: 'services', component: ServicesComponent },
@@ -35,9 +31,9 @@ export const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'contact', component: ContactComponent },
 
-  { path: '', redirectTo: 'en-US', pathMatch: 'full' }, // Default redirection
+  { path: '', redirectTo: 'en', pathMatch: 'full' }, // Default redirection
   { path: ':lang', component: AppComponent }, // Handle language segments
-  { path: '**', redirectTo: 'en-US' }, // Catch-all to redirect to default language
+  { path: '**', redirectTo: 'en' }, // Catch-all to redirect to default language
 ];
 
 @NgModule({
