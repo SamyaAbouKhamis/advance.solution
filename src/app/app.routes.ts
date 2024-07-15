@@ -3,7 +3,7 @@ import path from 'path';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 import { FeaturedComponent } from './featured/featured.component';
-import { AboutComponent } from './about/about.component';
+
 import { CountsComponent } from './counts/counts.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ServicesComponent } from './services/services.component';
@@ -21,7 +21,7 @@ export const routes: Routes = [
   { path: 'hero', component: HeroComponent },
   { path: 'featured', component: FeaturedComponent },
 
-  { path: 'about', component: AboutComponent },
+
   { path: 'counts', component: CountsComponent },
   { path: 'clients', component: ClientsComponent },
   { path: 'services', component: ServicesComponent },

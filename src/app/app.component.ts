@@ -23,7 +23,7 @@ import {
   transition,
 
 } from '@angular/animations';
-import { AboutComponent } from './about/about.component';
+
 
 @Component({
   selector: 'app-root',
@@ -51,7 +51,7 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     HeroComponent,
     FeaturedComponent,
-    AboutComponent,
+
     CountsComponent,
     ClientsComponent,
     ServicesComponent,
