@@ -31,7 +31,9 @@ export class ProductsComponent {
   // ];
 
   filteredImages: { src: string }[] = [
-    { src: 'assets/dahua.png' },
+    {
+      src: 'https://www.dropbox.com/scl/fi/y65ea2wjy48ywky8bq4ei/about.jpg?rlkey=d9h3qoq3inf64l3gdr5k7muhf&st=8nca74zj&dl=0',
+    },
     { src: 'assets/zk.png' },
     { src: 'assets/MMC.png' },
     { src: 'assets/qnap.png' },

@@ -14,6 +14,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, Input, ViewChild } from 
 
 })
 export class ClientsComponent {
+https: any;
 
 
 }

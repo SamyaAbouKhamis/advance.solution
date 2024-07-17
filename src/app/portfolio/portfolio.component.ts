@@ -36,17 +36,68 @@ export class PortfolioComponent implements OnInit {
 
   // ];
   images: Image[] = [
-    { src: 'assets/camera/00.png', category: 'Cameras' },
-    { src: 'assets/camera/5.png', category: 'Cameras' },
-    { src: 'assets/camera/3.png', category: 'Cameras' },
-    { src: 'assets/camera/4.png', category: 'Cameras' },
     {
-      src: './assets/camera/Image_N464E124C_WebsiteThumbnail.png',
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135092/00_bh33f6.png',
+      category: 'Cameras',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135096/3_rxm8c2.png',
+      category: 'Cameras',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135101/8_rww6j3.png',
+      category: 'Cameras',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135103/9_xjowy4.png',
+      category: 'Cameras',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135096/4_poonc4.png',
+      category: 'Cameras',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135099/5_ytzggd.png',
+      category: 'Cameras',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135099/6_fkyvj0.png',
+      category: 'Cameras',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135099/7_caiwfi.png',
+      category: 'Cameras',
+    },
+
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721135106/11_elzggy.webp',
       category: 'Servers',
     },
-    { src: './assets/camera/11.png', category: 'Servers' },
-    { src: './assets/camera/router.png', category: 'Networks' },
-    { src: './assets/camera/resever.png', category: 'Networks' },
+
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721209200/16._mr7ozt.webp',
+      category: 'Servers',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721209199/15_soyd47.webp',
+      category: 'Servers',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721209197/14_pydotv.webp',
+      category: 'Servers',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721210058/17_qzsg0y.png',
+      category: 'Networks',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721210066/18_hujb7d.png',
+      category: 'Networks',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721210074/19_axrjjf.png',
+      category: 'Networks',
+    },
   ];
   filteredImages: Image[] = [...this.images];
   selectedCategory: string = 'All';
