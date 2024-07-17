@@ -32,15 +32,31 @@ export class ProductsComponent {
 
   filteredImages: { src: string }[] = [
     {
-      src: 'https://www.dropbox.com/scl/fi/y65ea2wjy48ywky8bq4ei/about.jpg?rlkey=d9h3qoq3inf64l3gdr5k7muhf&st=8nca74zj&dl=0',
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216728/dahua_hpfgcc.png',
     },
-    { src: 'assets/zk.png' },
-    { src: 'assets/MMC.png' },
-    { src: 'assets/qnap.png' },
-    { src: 'assets/Mikrotik.png' },
-    { src: 'assets/Logo-Ubiq.png' },
-    { src: 'assets/qnap.png' },
-    { src: 'assets/Seagate.png' },
-    { src: 'assets/qnap.png' },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216764/MMC_z0negg.png',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216754/Mikrotik_lppz23.png',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216753/Logo-Ubiq_ik9mn6.png',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216765/qnap_nhr9n2.png',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216773/zk_jj144x.png',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216770/Seagate_hpidai.png',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216728/dahua_hpfgcc.png',
+    },
+    {
+      src: 'https://res.cloudinary.com/dqrorqtyj/image/upload/v1721216754/Mikrotik_lppz23.png',
+    },
   ];
 }

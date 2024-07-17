@@ -23,6 +23,7 @@ import {
   transition,
 
 } from '@angular/animations';
+import { AboutComponent } from './about/about.component';
 
 
 @Component({
@@ -51,7 +52,7 @@ import {
     HeaderComponent,
     HeroComponent,
     FeaturedComponent,
-
+AboutComponent,
     CountsComponent,
     ClientsComponent,
     ServicesComponent,
