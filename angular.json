@@ -23,7 +23,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "localize": true,
-            "outputPath": "dist/advance",
+            "outputPath": "dist/advance/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js", "@angular/localize/init"],
