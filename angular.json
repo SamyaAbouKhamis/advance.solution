@@ -43,6 +43,12 @@
               "entry": "server.ts"
             }
           },
+          "server": {
+            "options": {
+              "outputPath": "dist/advance/server"
+           
+            }
+          },
           "configurations": {
             "production": {
               "budgets": [
