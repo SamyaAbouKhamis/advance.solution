@@ -53,8 +53,8 @@
           />
         </svg>
       </a>
-      <a (click)="switchLang()" class="text-white me-2">
-        @if (locale=='en') {<a
+      <a (click)="switchLang()" class="text-white me-2" style="vertical-align: middle;">
+        @if (locale=='en') {<a     
           href="http://localhost:4200/ar"
           class="material-symbols-outlined"
           style="color: aliceblue; font-size: 20px"
@@ -62,6 +62,7 @@
           language
         </a>
         } @else {<a
+          
           style="color: aliceblue; font-size: 20px"
           href="http://localhost:65317/en"
           class="material-symbols-outlined"
@@ -116,7 +117,7 @@
           >
             <a
               i18n
-              href="http://localhost:5008/"
+              href="http://localhost:5009/"
               (click)="setActiveLink('index.html')"
               [ngClass]="{ active: activeLink === 'home' }"
               >Home</a
