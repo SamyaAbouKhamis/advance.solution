@@ -45,7 +45,8 @@
           },
           "server": {
             "options": {
-              "outputPath": "dist/advance/server"
+              "outputPath": "dist/advance/server",
+              "main": "src/main.server.ts"
            
             }
           },
