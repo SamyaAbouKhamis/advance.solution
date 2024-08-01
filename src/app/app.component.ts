@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, Optional } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
@@ -24,6 +24,7 @@ import {
 
 } from '@angular/animations';
 import { AboutComponent } from './about/about.component';
+import { Context } from 'vm';
 
 
 @Component({
@@ -52,7 +53,7 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     HeroComponent,
     FeaturedComponent,
-AboutComponent,
+    AboutComponent,
     CountsComponent,
     ClientsComponent,
     ServicesComponent,
@@ -69,5 +70,11 @@ AboutComponent,
 })
 export class AppComponent {
   title = 'advance';
- 
+  constructor(
+    // ...
+    @Inject('netlify.request') @Optional() request?: Request,
+    @Inject('netlify.context') @Optional() context?: Context
+  ) {
+    console.log(`#request:`, request);
+  }
 }
