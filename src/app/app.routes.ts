@@ -31,9 +31,7 @@ export const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'contact', component: ContactComponent },
 
-  { path: '', redirectTo: 'en', pathMatch: 'full' }, // Default redirection
-  { path: ':lang', component: AppComponent }, // Handle language segments
-  { path: '**', redirectTo: 'en' }, // Catch-all to redirect to default language
+
 ];
 
 @NgModule({
