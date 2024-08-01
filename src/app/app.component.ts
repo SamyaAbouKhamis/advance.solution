@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, Optional } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
@@ -10,7 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { ProductsComponent } from './products/products.component';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule, NgOptimizedImage, registerLocaleData } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,13 +25,17 @@ import {
 } from '@angular/animations';
 import { AboutComponent } from './about/about.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { Context } from 'node:vm';
 
+import localeAr from '@angular/common/locales/ar';
+import localeEn from '@angular/common/locales/en';
 
+registerLocaleData(localeEn,localeAr);
 @Component({
   selector: 'app-root',
   standalone: true,
 
-   animations: [
+  animations: [
     trigger('fadeInOut', [
       transition(':enter', [
         style({ opacity: 0 }),
@@ -66,12 +70,20 @@ import { BrowserModule } from '@angular/platform-browser';
     ProductsComponent,
     NgOptimizedImage,
     RouterLink,
-
-    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'advance';
+  constructor(
+    // ...
+    @Inject('netlify.request') @Optional() request?: Request,
+    @Inject('netlify.context') @Optional() context?: Context
+  ) {
+    console.log(
+      `Rendering Foo for path ${request?.url} from location ${context?.['geo']?.city}`
+    );
+    // ...
+  }
 }
