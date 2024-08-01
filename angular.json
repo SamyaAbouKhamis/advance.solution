@@ -4,15 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "advance": {
-      "i18n": {
-        "sourceLocale": "en",
-        "locales": {
-          "ar": {
-            "translation": "src/locale/messages.ar.json",
-            "baseHref": "ar/"
-          }
-        }
-      },
+    
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -43,13 +35,7 @@
               "entry": "server.ts"
             }
           },
-          "server": {
-            "options": {
-              "outputPath": "dist/advance/server"
-              
-           
-            }
-          },
+      
           "configurations": {
             "production": {
               "budgets": [
@@ -70,8 +56,7 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            },
-            "ar": { "localize": ["ar"] }
+            }
           },
           "defaultConfiguration": "production"
         },
@@ -83,28 +68,16 @@
             },
             "development": {
               "buildTarget": "advance:build:development"
-            },
-            "ar": {
-              "buildTarget": "advance:build:development,ar"
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "advance:build",
-            "outputPath": "src/locale",
-            "format": "json"
-          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing",
-              "@angular/localize/init"
+              "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
