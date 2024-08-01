@@ -2,10 +2,17 @@ import { Component, ElementRef, Inject, Input, LOCALE_ID, ViewChild } from '@ang
 import { ActivatedRoute, NavigationEnd, Router, RouterLink } from '@angular/router';
 import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common'
 import { animate, AnimationBuilder, group, state, style, transition, trigger } from '@angular/animations';
+
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, NgOptimizedImage, CommonModule],
+  imports: [
+    RouterLink,
+    NgOptimizedImage,
+    CommonModule,
+ 
+    
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   animations: [
@@ -102,6 +109,7 @@ export class HeaderComponent {
         const urlSegments = decodedUrl.split('/');
         this.locale = urlSegments[1] || 'en';
         this.changeCssFile(this.locale);
+      
       }
     });
   }
@@ -141,6 +149,8 @@ export class HeaderComponent {
     const newLocale = this.locale === 'ar' ? 'en' : 'ar';
     this.locale = newLocale;
     this.router.navigate(['/', this.locale]);
+    
+    
   }
   private scrollToElement(element: HTMLElement): void {
     const animation = this.animationBuilder.build([
