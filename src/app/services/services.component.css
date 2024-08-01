@@ -1,11 +1,12 @@
 
-
 .section-title {
   text-align: center;
   padding-bottom: 30px;
-  padding: 95px 0;
+  padding: 60px 0;
 }
-
+.mobile {
+  display: none;
+}
 .section-title h2 {
   font-size: revert;
   letter-spacing: 1px;
@@ -124,8 +125,10 @@
   }
   
   .section-title h2 {
-    font-size: 11px;
-    padding: 6px 15px;
+    font-size: revert;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
   }
   
   .section-title h3 {
