@@ -70,11 +70,15 @@ import { Context } from 'vm';
 })
 export class AppComponent {
   title = 'advance';
+
   constructor(
     // ...
     @Inject('netlify.request') @Optional() request?: Request,
     @Inject('netlify.context') @Optional() context?: Context
   ) {
-    console.log(`#request:`, request);
+    console.log(
+      `Rendering Foo for path ${request?.url} from location ${context?.['geo']?.city}`
+    );
+    // ...
   }
 }
