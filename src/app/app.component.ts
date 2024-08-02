@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, Optional } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Inject, OnInit, Optional } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
@@ -14,15 +14,15 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HostBinding} from '@angular/core';
+import { HostBinding } from '@angular/core';
 import {
   trigger,
   state,
   style,
   animate,
   transition,
-
 } from '@angular/animations';
+import { LoaderComponent } from './loader/loader.component';
 import { AboutComponent } from './about/about.component';
 import { Context } from 'vm';
 import * as AOS from 'aos';
@@ -48,16 +48,19 @@ import * as AOS from 'aos';
     ProductsComponent,
     NgOptimizedImage,
     RouterLink,
+    CommonModule,
+    LoaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
   title = 'advance';
   ngOnInit() {
     AOS.init();
   }
- 
+
   constructor(
     // ...
     @Inject('netlify.request') @Optional() request?: Request,

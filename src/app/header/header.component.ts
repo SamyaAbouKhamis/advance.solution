@@ -1,7 +1,28 @@
-import { Component, ElementRef, Inject, Input, LOCALE_ID, ViewChild } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router, RouterLink } from '@angular/router';
-import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common'
-import { animate, AnimationBuilder, group, state, style, transition, trigger } from '@angular/animations';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  Input,
+  LOCALE_ID,
+  ViewChild,
+} from '@angular/core';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterLink,
+} from '@angular/router';
+import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common';
+import {
+  animate,
+  AnimationBuilder,
+  group,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import { LoaderService } from '../loader.service';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -76,15 +97,19 @@ import { animate, AnimationBuilder, group, state, style, transition, trigger } f
 })
 export class HeaderComponent {
   activeLink: string = '';
-
+  // loaderStatus: boolean = true;
   constructor(
     @Inject(LOCALE_ID) public locale: string,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private animationBuilder: AnimationBuilder,
+    private loaderService: LoaderService,
     @Inject(DOCUMENT) private document: Document
   ) {}
+
   ngOnInit() {
+    this.loaderService.showLoader(); // Show the loader initially
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const fragment = this.activatedRoute.snapshot.fragment;
@@ -102,10 +127,15 @@ export class HeaderComponent {
         const urlSegments = decodedUrl.split('/');
         this.locale = urlSegments[1] || 'en';
         this.changeCssFile(this.locale);
+
+        // Simulate data fetching or other async operations
+        setTimeout(() => {
+          this.loaderService.hideLoader(); // Hide the loader after operations
+        }, 1500); // Adjust this duration as needed
       }
     });
+    // this.loaderService.hideLoader();
   }
-
   // switchLang() {
   //   location.href = this.locale === 'ar' ? '/en-US' : '/ar';
   // }
@@ -155,6 +185,3 @@ export class HeaderComponent {
     player.play();
   }
 }
-
-
-
