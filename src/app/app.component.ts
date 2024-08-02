@@ -1,4 +1,4 @@
-import { Component, Inject, Optional } from '@angular/core';
+import { Component, Inject, OnInit, Optional } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
@@ -25,29 +25,13 @@ import {
 } from '@angular/animations';
 import { AboutComponent } from './about/about.component';
 import { Context } from 'vm';
+import * as AOS from 'aos';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
 
-  // animations: [
-  //   trigger('fadeInOut', [
-  //     state(
-  //       'in',
-  //       style({
-  //         opacity: 1,
-  //       })
-  //     ),
-  //     state(
-  //       'out',
-  //       style({
-  //         opacity: 0,
-  //       })
-  //     ),
-  //     transition('in <=> out', [animate(1000)]),
-  //   ]),
-  // ],
   imports: [
     RouterOutlet,
     HeaderComponent,
@@ -70,7 +54,10 @@ import { Context } from 'vm';
 })
 export class AppComponent {
   title = 'advance';
-
+  ngOnInit() {
+    AOS.init();
+  }
+ 
   constructor(
     // ...
     @Inject('netlify.request') @Optional() request?: Request,
