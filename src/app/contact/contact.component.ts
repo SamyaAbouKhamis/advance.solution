@@ -21,20 +21,20 @@ export class ContactComponent {
 
   ngOnInit(): void {}
 
-  // ngAfterViewInit(): void {
-  //   this.initMap();
-  // }
+  ngAfterViewInit(): void {
+    this.initMap();
+  }
 
-  // initMap(): void {
-  //   const mapDiv = document.getElementById('map') as HTMLElement;
-  //   if (mapDiv) {
-  //     const mapOptions: google.maps.MapOptions = {
-  //       center: new google.maps.LatLng(37.7749, -122.4194),
-  //       zoom: 8,
-  //     };
-  //     this.map = new google.maps.Map(mapDiv, mapOptions);
-  //   }
-  // }
+  initMap(): void {
+    const mapDiv = document.getElementById('map') as HTMLElement;
+    if (mapDiv) {
+      const mapOptions: google.maps.MapOptions = {
+        center: new google.maps.LatLng(37.7749, -122.4194),
+        zoom: 8,
+      };
+      this.map = new google.maps.Map(mapDiv, mapOptions);
+    }
+  }
   contactForm: FormGroup;
 
   @ViewChild('contactFormRef') contactFormElement!: ElementRef;
