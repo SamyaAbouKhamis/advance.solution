@@ -22,11 +22,14 @@
 
 /* Loader Section  */
 
+
+
 .loader {
   width: 108px; /* Adjust based on your loader size */
   height: 108px; /* Ensure width and height are equal */
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+            display: flex;
+            justify-content: space-between;
   z-index: 2; /* Ensure the loader appears on top of the overlay */
 }
 

@@ -131,7 +131,7 @@ export class HeaderComponent {
         // Simulate data fetching or other async operations
         setTimeout(() => {
           this.loaderService.hideLoader(); // Hide the loader after operations
-        }, 1500); // Adjust this duration as needed
+        }, 4500); // Adjust this duration as needed
       }
     });
     // this.loaderService.hideLoader();
