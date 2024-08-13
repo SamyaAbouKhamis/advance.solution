@@ -62,13 +62,13 @@ export class AppComponent {
   }
 
   constructor(
-    // ...
+  
     @Inject('netlify.request') @Optional() request?: Request,
     @Inject('netlify.context') @Optional() context?: Context
   ) {
     console.log(
       `Rendering Foo for path ${request?.url} from location ${context?.['geo']?.city}`
     );
-    // ...
+
   }
 }
